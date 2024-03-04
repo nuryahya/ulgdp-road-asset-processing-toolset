@@ -1,0 +1,59 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = 'ulgdp-road-asset-processing-toolset'
+version = "0.0.0"
+authors = [
+  { name="Nur Yahya"},
+]
+description = "A Python toolbox for road asset processing as per ULGDP manual of Ethiopia"
+readme = "README.md"
+requires-python = ">=3.6, <=3.10"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: Apache Software License",
+]
+license = {file = "LICENSE"}
+dependencies = [
+    "arcgis>=2.0.1",
+    "azure-storage-file",
+    "boto3",
+    "h3",
+    "numpy>=1.7",
+    "openpyxl",
+    "pandas>=1.0.5",
+    "pyarrow>=1.0.0"
+]
+
+[project.optional-dependencies]
+dev = [
+    "arcgis>=2.0.1",
+    "azure-storage-file",
+    "boto3",
+    "h3",
+    "numpy>=1.7",
+    "openpyxl",
+    "pandas>=1.0.5",
+    "pyarrow>=1.0.0",
+    "bump2version",
+    "jupyterlab",
+    "nodejs",
+    "pytest",
+    "build"
+]
+docs = [
+    "autodocsumm",
+    "nbsphinx",
+    "furo",
+    "sphinx",
+    "sphinx-autobuild",
+    "sphinx-autodoc-typehints",
+    "sphinx-copybutton",
+    "sphinxcontrib-youtube"
+]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+include = ["ulgdp_road_asset_processing_toolset"]
